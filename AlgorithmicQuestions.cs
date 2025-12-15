@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Practice
 {
-   public static  class AlgorithmicQuestions
+    public static class AlgorithmicQuestions
     {
-       public static string ReverseString(string input)
+        public static string ReverseString(string input)
         {
             char[] chars = input.ToCharArray();
             int left = 0, right = chars.Length - 1;
@@ -24,7 +24,7 @@ namespace Practice
 
             return new string(chars);
         }
-       public static bool IsPalindrome(string s)
+        public static bool IsPalindrome(string s)
         {
             int left = 0, right = s.Length - 1;
 
@@ -36,6 +36,18 @@ namespace Practice
                 right--;
             }
             return true;
+        }
+        public static int FindMax(int[] arr)
+        {
+            int max = arr[0];
+
+            foreach (int num in arr)
+            {
+                if (num > max)
+                    max = num;
+            }
+            return max;
+
         }
 
     }
